@@ -1,0 +1,104 @@
+body{background-color: aquamarine;}
+a{ font-size: 34px;     
+    transition: color 3s;
+    color:rgb(139, 0, 118);}
+
+a:hover{
+   text-decoration: none;
+   color:white;
+   background-color: gray;
+   font-size: 34px;
+   border-radius: 10px;
+}
+
+img{   
+  /* animation-name: changeimg;
+  animation-duration: 10s;
+  animation-iteration-count: infinite; */
+  animation: cha--ngeimg 10s 2s infinite;
+  /* filter:grayscale(0.5);
+  filter: blur(3px); */
+}
+
+@keyframes changeimg {
+0% {margin-left: 0px; width:50%;  filter: blur(1px); transform: rotate(30deg);}
+
+100% { margin-left: 300px; width:10%;  filter: blur(4px); transform:rotate(270deg)}
+}
+
+
+.frame{
+    
+    border:3px solid orange;
+    height:300px;
+    animation: changeslide 4s;
+    background-image: url('nyc.jfif');
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+
+}
+
+@keyframes changeslide {
+  0%{background-image: url('nyc.jfif'); background-repeat: no-repeat; background-size: 100% 100%;}
+  25%{background-image: url('2.jfif');  background-repeat: no-repeat; background-size: 100% 100%;}
+  50%{background-image: url('3.jfif');  background-repeat: no-repeat; background-size: 100% 100%;}
+  75%{background-image: url('2.jfif'); background-repeat: no-repeat; background-size: 100% 100%;}
+  100% {background-image: url('2.jfif'); background-repeat: no-repeat; background-size: 100% 100%;}
+
+}
+
+
+.slideshowframe{
+    height:400px;
+    overflow: hidden;
+}
+
+.slidewapper{
+    width:400%;
+    animation: slideshow 4s;
+
+}
+
+@keyframes slideshow {
+    0%{margin-left: 0;}
+    25%{margin-left:-100%;}
+    50%{margin-left:-200%;}
+    75%{}
+    100% {}
+}
+.slidewapper>div{
+    width:25%;
+    float:left;
+}
+
+
+.s1{background-color: lightcoral;}
+.s2{
+    background-color: rgb(139, 224, 19);
+}
+
+
+
+
+#apple{
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(225,225,225,0.5);
+}
+
+#apple:target{
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+#apple>div {
+    background-color: white;
+    width:50%;
+    margin: auto;
+}
